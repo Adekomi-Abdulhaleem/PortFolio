@@ -1,0 +1,931 @@
+/* General styling */
+body {padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      color: white;
+      background-color: black;
+}
+.sectionName {color: #C94747;
+              margin-left: 20px;
+}
+a {color: inherit;
+   text-decoration: inherit;
+}
+
+/* 
+Styling for mobile size is the default
+This website is built From mobile - desktop
+*/
+
+/* styling for mobile */
+
+.mobile {display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: unset;
+         height: 10vh;
+         margin: 0 40px;
+         position: sticky;
+         top: 0;
+         z-index: 2;
+}
+/* mobile menu hamburger */
+.menu-section {background-color: black;
+                height: 45px;
+                width: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                padding: 0 0 3px 3px;
+}
+.menus {width: 20px; 
+        height: 2px;
+        background-color: #C94747;
+        border-radius: 50px;
+}
+.menus.change-color {background-color: black;
+}
+.menus::after.change-colora {background-color: black;
+}
+.menus::before {content: '';  
+                width: 12px; 
+                height: 2px;
+                background-color: #C94747;
+                position: absolute;
+                transform: translate(8px, -7px);
+                transition: .5s;
+}
+.menus::after {content: '';
+               width: 28px; 
+               height: 2px;
+               background-color: #C94747;
+               position: absolute;
+               transform: translate(-8px, 7px);
+               transition: .5s;
+}
+.menu-section.animate .menus {background: transparent;
+                              transition: .5s;
+}
+.menu-section.animate .menus::before {transform: rotate(-45deg);
+                                      transition: .5s;
+                                      width: 28px;
+}
+.menu-section.animate .menus::after {transform: rotate(45deg);
+                                     transition: .5s;
+}
+.mobile img {height: 50px;
+             width: 50px;
+}
+
+/* styling for slide in sidebar */
+header {position: sticky;
+        top: 0;
+        z-index: 1000;
+}
+header.show-bg-color {background-color: #C94747;
+                      border-bottom: 1px solid #181717;
+                      transition: 1s ease;
+                      color: white;
+}
+header ul {height: 90vh;
+           width: 70%;
+           background-color:#C94747;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-around;
+           align-items: center;
+           list-style: none;
+           margin-top: 0;
+           text-decoration: none;
+           transform: translateX(140%);
+           position: fixed;
+           float: right;
+}
+header ul a {text-decoration: none;
+             color: white;
+}
+.nav-active {transform: translateX(25%);
+             transition: .5s ease-in-out; 
+}
+.nav-active > * {opacity: 0;
+}
+/* animation for navbar */
+@keyframes fadeIn {
+    0% {opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {opacity: 1;
+          transform: translateX(0%);
+    }
+}
+
+/* styling for mobile ends here */
+
+
+/* styling for section one starts */
+
+.section-one {display: flex;
+              margin: 10px;
+}
+.section-one .part-one {flex: 2;
+                        font-size: 12px;
+                        letter-spacing: 1px;
+                        line-height: 18px;
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.section-one .part-two {flex: 1;
+}
+.section-one .part-one h2 {color: #C94747;
+                           font-size: 28px;
+                           line-height: 34px;
+                           font-family: risque;
+                           letter-spacing: 3px;
+                           margin: 5px 0;
+}
+.section-one .part-one p {margin-top: 0px;
+}
+.section-one .part-one button {border: 1.5px solid #C94747;
+                               background-color: unset;
+                               color: #C94747;
+                               width: 90px;
+                               height: 30px;
+                               border-radius: 50px;
+                               outline: none;
+                               transition: .5s linear;
+}
+.section-one .part-one button:hover {background-color: #C94747;
+                                     border: none;
+                                     box-shadow: 1px 1px 10px 5px #181717;
+                                     color: white;
+                                     transform: translate(5px, 5px);
+}
+.section-one .part-two {display: flex;
+                        justify-content: center;
+                        align-items: center;
+}
+.section-one .part-two img {height: 60px;
+                            width: 40px;
+                            z-index: 1;
+}
+.section-one .part-two #img1:hover {transform: scale(2);
+                                    transition: .25s ease-in-out;
+                                    z-index: 51;
+} 
+.section-one .part-two #img2:hover {transform: scale(2);
+                                    transition: .25s ease-in-out;
+                                    z-index: 50;
+} 
+.section-one .part-two #img3:hover {transform: scale(2) translateX(-10px);
+                                    transition: .25s ease-in-out;
+} 
+.section-one .part-two img:nth-child(1) {transform: rotate(-30deg) translate(3px, 7px);
+}
+.section-one .part-two img:nth-child(3) {transform: rotate(30deg) translate(1px, 5px);
+}
+
+/* styling for seconds ends */
+
+
+/* styling for section two starts */
+.section-two .parts {display: flex;
+                     flex-wrap: wrap;
+                     margin: -20px 10px 0;
+                     line-height: 30px;
+                     font-size: 36px;
+}
+.section-two .part {flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+}
+.section-two .part-two img {height: 300px;
+                            width: 300px;
+                            border-radius: 50%;
+                            border: 5px solid #C94747;
+}
+.section-two .part-one {font-size: 18px;
+                        letter-spacing: 1px;
+                        font-family: Roboto Condensed;
+                        font-style: italic;
+                        text-align: center;
+}
+
+/* styling for section two ends */
+
+
+/* styling for section three */
+.section-three .part {margin-top: 20px;
+}
+.section-three .part .image-line {height: 220px;
+                                  width: 90%;
+                                  margin: auto;
+                                  overflow: hidden;
+}
+.section-three .part .content {width: 100%;
+                               height: 100%;
+}
+.section-three .part .image-line {background-size: cover;
+}
+.section-three .part-one .image-line {background-image: url(../PortFolio/media/ohw-img.png);
+}
+.section-three .part-two .image-line {background: url(../PortFolio/media/mtc-img.png) no-repeat center;
+}
+.section-three .part-three .image-line {background-image: url(../PortFolio/media/todo-img.png);
+}
+.section-three .part-four .image-line {background-image: url(../PortFolio/media/ordereat-home-img.png);
+}
+.section-three .part-five .image-line {background-image: url(../PortFolio/media/ordereat-members-img.png);
+}
+.section-three .part-six .image-line {background-image: url(../PortFolio/media/calc-img.png);
+}
+.section-three .part-seven .image-line {background-image: url(../PortFolio/media/havene-img.png);
+}
+.section-three .part-eight .image-line {background-image: url(../PortFolio/media/eczite-img.png);
+}
+.section-three .part-nine .image-line {background-image: url(../PortFolio/media/svg-img.png);
+}
+.section-three .part-ten .image-line {background: url(../PortFolio/media/vanguard-img.png) no-repeat center;
+}
+
+.section-three .part .content {background: linear-gradient(45deg, rgba(152, 199, 54, 0.56), rgba(124, 220, 226, 1));
+                               color: black;
+                               transform: translateY(100%);
+                               transition: 1s ease;
+}
+.section-three .part .image-line:hover .content {transform: translateY(-5%);
+}
+.section-three .part .content h3 {text-align: center;
+                                  font-size: 24px;
+                                  font-weight: bold;
+                                  padding: 10px;
+                                  margin-bottom: 10px;
+}
+.section-three .part .content p {margin: 5px;
+                                 text-align: center;
+                                 font-family: snippet;
+}
+.section-three .part .content #secondP {margin-top: 10px;
+                                        line-height: 24px;
+}
+.section-three .part .content span {float: right;
+                                    margin-right: 10px;
+}
+.section-three .part .view-line {display: flex;
+                                 margin-top: 15px;
+                                 justify-content: space-around;
+}
+.section-three .view-line button {height: 25px;
+                                  padding: 0 10px;
+                                  background-color: unset;
+                                  border-radius: 3px;
+                                  font-size: 10px;
+                                  outline: none;
+}
+.section-three .view-line button:nth-child(1) {border: 1px solid #C94747;    
+}
+.section-three .view-line button:nth-child(2) {border: 1px solid #53F350;    
+}
+.section-three .view-line button:nth-child(3) {border: 1px solid white;   
+}
+/* preview buttons style */
+.section-three .view-line button:nth-child(1):hover {background-color: #C94747;
+}
+.section-three .view-line button:nth-child(2):hover {background-color: #53F350;
+}
+.section-three .view-line button:nth-child(3):hover {background-color: white;
+}
+.section-three .view-line button:nth-child(1):hover > a {color: white;
+} 
+.section-three .view-line button:nth-child(2):hover > a {color: white;
+} 
+.section-three .view-line button:nth-child(3):hover > a {color: black;
+} 
+.section-three .view-line button:nth-child(1) a {color: #C94747;
+                                                 text-decoration: none;
+}
+.section-three .view-line button:nth-child(2) a {color: #53F350;
+                                                 text-decoration: none;
+}
+.section-three .view-line button:nth-child(3) a {color: white;
+                                                 text-decoration: none;
+}
+
+/* styling for section three ends */
+
+
+/* styling for section four starts */
+
+.section-four {margin: 0 10px;
+}
+.section-four h3 {text-align: center;
+                  font-family: Shojumaru;
+}
+.section-four .skills {border-left: 3px solid #C94747;
+                      padding-left: 20px;
+                      background-color: unset;
+}
+.section-four .skill {display: flex;
+                     justify-content: space-between;
+}
+.section-four .skill .part-one h3 {font-family: Share Tech;
+                                   font-weight: 100;
+}
+.section-four .skill .part-two {display: flex;
+                                justify-content: center;
+                                align-items: center;
+}
+.section-four .skill .part-two .main {width: 120px;
+                                     height: 1vh;
+                                     background-color: antiquewhite;
+                                     border-radius: 50px;
+                                     overflow: hidden;
+}
+.section-four .skill .part-two .percent {width: 100%;
+                                        height: 100%;
+                                        background-color: #53F350;
+                                        border-radius: 50px;
+                                        border-bottom-right-radius: 0;
+                                        border-top-right-radius: 0;
+                                        transform: translateX(-100%); 
+}
+/* animation part of the percentage for mobile */
+.section-four .skill .part-two .per-one.animate-mob {transform: translateX(-10%);
+                                                     transition: 1s ease;
+}
+.section-four .skill .part-two .per-two.animate-mob {transform: translateX(-15%);
+                                                     transition: 1s ease;
+}
+.section-four .skill .part-two .per-three.animate-mob {transform: translateX(-20%);
+                                                       transition: 1s ease;
+}
+.section-four .skill .part-two .per-four.animate-mob{transform: translateX(-40%);
+                                                     transition: 1s ease;
+}
+.section-four .skill .part-two .per-five.animate-mob {transform: translateX(-50%);
+                                                      transition: 1s ease;
+}
+.section-four .skill .part-two .per-six.animate-mob {transform: translateX(-40%);
+                                                     transition: 1s ease;
+}
+.section-four .skill .part-two .per-seven.animate-mob {transform: translateX(-50%);
+                                                       transition: 1s ease;
+}
+.section-four .skill .part-two .per-eight.animate-mob {transform: translateX(-80%);
+                                                       transition: 1s ease;
+}
+.section-four .skill .part-two .per-nine.animate-mob {transform: translateX(-20%);
+                                                      transition: 1s ease;
+}
+.section-four .skill .part-two .per-ten.animate-mob {transform: translateX(-40%);
+                                                     transition: 1s ease;
+}
+.section-four .skill .part-two .per-eleven.animate-mob {transform: translateX(-50%);
+                                                        transition: 1s ease;
+}
+.section-four .skill .part-two .per-twelve.animate-mob {transform: translateX(-70%);
+                                                        transition: 1s ease;
+}
+/* styling for section four ends */
+
+
+/* styling for section five starts */
+
+.section-five .blog {margin-top: 40px;
+}
+.section-five .blog .image-part {height: 300px;
+                                 overflow: hidden;
+}
+.section-five .blog img {height: 100%;
+                         width: 100%;
+                         transition: .75s ease;
+                         opacity: .7;
+}
+.section-five .blog img:hover {transform: scale(1.5);
+}
+.section-five .blog .info-part {margin: 10px;
+}
+.section-five .blog .info-part > * {margin-bottom: 5px;
+}
+.section-five .blog .heading {color: #53F350;
+                              font-family: Atata;
+                              font-size: 24px;
+                              font-weight: bold;
+                              opacity: .8;
+}
+.section-five .blog .summary {letter-spacing: 1px;
+                              font-size: 12px;
+                              font-family: Roboto;
+                              opacity: .5;
+                              line-height: 18px;
+                              border-left: 2px solid rgb(180, 180, 180);
+                              background-color: #181717;
+                              box-shadow: #272626;
+                              padding: 1px 10px;
+}
+.section-five .blog .date {float: right;
+                           font-family: Roboto;
+                           font-weight: 10;
+                           opacity: .5;
+                           font-size: 12px;
+}
+
+/* styling for section five ends */
+
+
+/* styling for section six starts */
+
+.section-six .parts {text-align: center;
+}
+.section-six .part {display: flex;
+                    justify-content: center;
+                    align-items: center;
+}
+.section-six .part a {width: 100%;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+}
+.section-six .part button {width: 80%;
+                           height: 60px;
+                           border-radius: 5px;
+                           background-color: unset;
+                           border: 1px solid #C94747;
+                           color: #C94747;
+                           margin: 10px;
+                           font-size: 24px;
+                           display: flex;
+                           justify-content: space-between;
+                           align-items: center;
+                           outline: none;
+                           transition: .5s ease;
+                           text-decoration: none;
+}
+.section-six .part button:hover {border: none;
+                                 border-left: 5px solid rgb(180, 180, 180);
+                                 border-top-left-radius: 0;
+                                 border-bottom-left-radius: 0;
+                                 color: rgb(180, 180, 180);
+                                 background-color: #C94747;
+}
+
+/* styling for section six ends */
+
+/* background animation styling */
+.each-anime {height: 5px;
+             width: 5px;
+             background-color: white;
+             border-radius: 50%;
+}
+
+/* animation delay for each - all sides */
+.direction .each-anime:nth-child(1) {animation-delay: .5s;
+}
+.direction .each-anime:nth-child(3) {animation-delay: 2s;
+}
+.direction .each-anime:nth-child(5) {animation-delay: 4s;
+}
+.direction .each-anime:nth-child(6) {animation-delay: 2s;
+}
+.direction .each-anime:nth-child(8) {animation-delay: 7s;
+}
+.direction .each-anime:nth-child(9) {animation-delay: 5s;
+}
+.direction .each-anime:nth-child(10) {animation-delay: 3s;
+}
+.direction .each-anime:nth-child(13) {animation-delay: 5s;
+}
+.direction .each-anime:nth-child(14) {animation-delay: 1s;
+}
+
+/* animation coming from top */
+.from-topers {position: fixed;
+               top: 0;
+               width: 100%;
+               opacity: .6;
+               display: flex;
+               z-index: -1000;
+               justify-content: space-around;
+               transform: translateY(-10px);
+}
+@keyframes fromTop {
+      0% {
+          transform: translateY(0);
+          opacity: 0;
+      }50% {
+          opacity: 1;
+      }70% {
+          opacity: 1;
+      }100% {
+          transform: translateY(100vh);
+          opacity: 0;
+      }
+  }
+  .from-topers .each-anime {animation: fromTop 20s linear infinite;
+  }
+
+/* animation coming from bottom */
+.from-bottomers {position: fixed;
+                 bottom: 0;
+                 width: 100%;
+                 opacity: .6;
+                 display: flex;
+                 z-index: -1000;
+                 justify-content: space-around;
+                 transform: translateY(10px);
+}
+@keyframes fromBottom {
+      0% {
+          transform: translateY(0);
+          opacity: 0;
+      }50% {
+          opacity: 1;
+      }70% {
+          opacity: 1;
+      }100% {
+          transform: translateY(-100vh);
+          opacity: 0;
+      }
+}
+.from-bottomers .each-anime {animation: fromBottom 20s linear infinite;
+}
+/* ends */
+
+/* animation coming from left */
+.from-lefters {position: fixed;
+               bottom: 0;
+               width: 100%;
+               height: 100%;
+               opacity: .6;
+               display: flex;
+               flex-direction: column;
+               z-index: -1000;
+               justify-content: space-around;
+               transform: translateX(-10px);
+}
+@keyframes fromLeft {
+      0% {
+      transform: translateX(0);
+      opacity: 0;
+      }50% {
+      opacity: 1;
+      }70% {
+      opacity: 1;
+      }100% {
+      transform: translateX(100vh);
+      opacity: 0;
+      }
+}
+.from-lefters .each-anime {animation: fromLeft 20s linear infinite;
+}
+/* ends */
+
+/* svg container style */
+
+/* svg initial style */
+.svg-container {height: 80vh;
+                width: 100%;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: removeSvg 1s ease forwards 8s;
+}
+/* animate remove of svg */
+@keyframes removeSvg {
+    to {display: none;
+    }
+}
+
+/* header and main initial styling */
+header {opacity: 0;
+        animation: showPage 1s linear forwards 6s;
+}
+main {opacity: 0;
+      animation: showPage 1s linear forwards 6s;
+}
+/* animate display of header and main */
+@keyframes showPage {
+    from {opacity: 0;
+    }
+    to {opacity: 1;
+    }
+}
+
+/* the svg default style on mobile */
+#logo {animation: move 1s linear forwards 5s;
+       transform: scale(.4);
+       position: fixed;
+       z-index: 10000;
+}
+/* each svg path style */
+#logo > * {
+       animation: fill 1s ease forwards 3.5s;
+}
+/* each svg part animate */
+/* path 1 */
+#logo path:nth-child(2) {stroke-dasharray: 311;
+                         stroke-dashoffset: 311;
+                         animation: displayEach 1s ease forwards;
+}
+/* path 2 */
+#logo path:nth-child(3) {stroke-dasharray: 288;
+                         stroke-dashoffset: 288;
+                         animation: displayEach 1s ease forwards .3s;
+}
+/* path 3 */
+#logo path:nth-child(4) {stroke-dasharray: 377;
+                         stroke-dashoffset: 377;
+                         animation: displayEach 1s ease forwards .6s;
+}
+/* path 4 */
+#logo path:nth-child(5) {stroke-dasharray: 375;
+                         stroke-dashoffset: 375;
+                         animation: displayEach 1s ease forwards .9s;
+}
+/* path 5 */
+#logo path:nth-child(6) {stroke-dasharray: 391;
+                         stroke-dashoffset: 391;
+                         animation: displayEach 1s ease forwards 1.2s;
+}
+/* path 6 */
+#logo path:nth-child(7) {stroke-dasharray: 166;
+                         stroke-dashoffset: 166;
+                         animation: displayEach 1s ease forwards 1.5s;
+}
+/* path 7 */
+#logo path:nth-child(8) {stroke-dasharray: 291;
+                         stroke-dashoffset: 291;
+                         animation: displayEach 1s ease forwards 1.8s;
+}
+/* path 8 */
+#logo path:nth-child(9) {stroke-dasharray: 377;
+                         stroke-dashoffset: 377;
+                         animation: displayEach 1s ease forwards 2.1s;
+}
+/* path 9 */
+#logo path:nth-child(10) {stroke-dasharray: 495;
+                         stroke-dashoffset: 495;
+                         animation: displayEach 1s ease forwards 2.4s;
+}
+/* path 10 */
+#logo path:nth-child(11) {stroke-dasharray: 391;
+                         stroke-dashoffset: 391;
+                         animation: displayEach 1s ease forwards 2.7s;
+}
+/* animation controller for each svg paths */
+@keyframes displayEach {
+    to {
+        stroke-dashoffset: 0px;
+    }
+}
+
+/* animation controller to fill the svg after display */
+@keyframes fill {
+    0% {opacity: 0;
+    }
+    to {
+        fill: white;
+        position: absolute;
+    }
+}
+
+/*controller to make svg opacity 0 after filling */
+@keyframes move {
+    0% {opacity: 1;
+    }
+    100% {opacity: 0;
+          display: none;
+    }
+}
+
+
+/* 
+This media query is for tablet phone screen sizes
+*/
+
+@media (min-width:725px) {
+      /* general */
+      .sectionName {font-size: 36px;
+      }
+
+      /* header */
+      #logo {transform: scale(.7);
+      }
+      header {display: flex;
+      }
+      #my-logo {height: 70px;
+                width: 70px;
+                position: absolute;
+                top: 10px;
+      }
+      #my-logo.active {top: 10px;
+      }
+      header .part-two {display: none;
+      }
+      header ul {flex-direction: row;
+                 background-color: unset;
+                 transform: translateX(40%);
+                 height: unset;
+                 flex: 1;
+                 margin: 40px 0 0 -40px;
+      }
+      header .mobile {flex: 1;
+                      display: block;
+      }
+      /* header ends */
+
+      /* section one starts */
+      .section-one {margin: 0 30px;
+      }
+      .section-one .part-one h2 {font-size: 48px;
+                                 letter-spacing: 10px;
+                                 line-height: 48px;
+                                 margin: 8px 0;
+      }
+      .section-one .part-one p {font-size: 20px;
+                                font-weight: 200;
+                                line-height: 28px;
+                                letter-spacing: 3px;
+      }
+      .section-one .part-one button {width: 130px;
+                                     height: 40px;
+                                     font-size: 16px;
+      }
+      .section-one .part-two {margin-right: 20px;
+      }
+      .section-one .part-two img {height: 160px;
+                                  width: 90px;
+      }
+      .section-one .part-two img:nth-child(1):hover {z-index: 2;
+      }
+      /* section one ends */
+      
+      /* section two starts */
+      .section-two .part-one {line-height: 30px;
+                              font-size: 24px;
+      } 
+      /* section two ends */
+      
+      /* section three starts */
+      .section-three .part {width: 50%;
+      }
+      .section-three .parts {display: flex;
+                             flex-wrap: wrap;
+      }
+      .section-three .parts {display: flex;
+                             justify-content: center;
+                             align-items: center;
+      }
+      .section-three .view-line button {transform: scale(1.2);
+      }
+      .section-three .part .content h3 {margin-bottom: -5px;
+      }
+      /* section three ends */
+      
+      /* section four starts */
+      .section-four .skills {margin: 50px;
+                             border-left: 5px solid #C94747;
+      }
+      .section-four .skill .part-one h3 {font-size: 26px;
+      }
+      .section-four .skill .part-two .main {width: 250px;
+                                            height: 10px;
+      }     
+      .section-four h3 {font-size: 30px;
+      } 
+
+      /* animation part of the percentage for tab and desktop*/
+      .section-four .skill .part-two .per-one.animate-tab-desk {transform: translateX(-10%);
+                                                                transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-two.animate-tab-desk {transform: translateX(-15%);
+                                                                transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-three.animate-tab-desk {transform: translateX(-20%);
+                                                                  transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-four.animate-tab-desk {transform: translateX(-40%);
+                                                                 transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-five.animate-tab-desk {transform: translateX(-50%);
+                                                                 transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-six.animate-tab-desk {transform: translateX(-40%);
+                                                                transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-seven.animate-tab-desk {transform: translateX(-50%);
+                                                                  transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-eight.animate-tab-desk {transform: translateX(-80%);
+                                                                  transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-nine.animate-tab-desk {transform: translateX(-20%);
+                                                                 transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-ten.animate-tab-desk {transform: translateX(-40%);
+                                                                transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-eleven.animate-tab-desk {transform: translateX(-50%);
+                                                                   transition: 1s ease;
+      }
+      .section-four .skill .part-two .per-twelve.animate-tab-desk {transform: translateX(-70%);
+                                                                   transition: 1s ease;
+      }
+
+      /* section four ends */
+      
+      /* section five starts */
+      .section-five .blogs {display: flex;
+                            justify-content: center;
+      }
+      .section-five .blog {width: 50%;
+                           margin: 10px;
+      }.section-five .blog .image-part {height: 270px;
+      }
+      /* section five ends */
+      
+      /* section six starts */
+      .section-six .part button {width: 75%;
+                                 height: 100px;
+                                 margin: 20px;
+                                 border: 2px solid #C94747;
+                                 font-size: 30px;
+                                 padding: 0 10px;
+      }
+      .section-six .part button:hover {border-left: 7px solid rgb(180, 180, 180);
+      }
+      /* section six ends */
+
+
+      /* End of tablet media queres */
+
+}
+
+
+@media (min-width:925px) {
+      /* styling of the header */
+      header ul {font-size: 24px;   
+      }
+      #logo {transform: scale(1.2);
+      }
+
+      /* styling of section one */
+      .section {margin: 20px 50px;
+      }
+      .section-one .part-one h2 {margin: 10px 0;
+                                 font-size: 70px;
+                                 line-height: 75px;
+      }
+      .section-one .part-one p {font-size: 28px;
+                                line-height: 36px;
+      }
+      .section-one .part-two {margin-right: 100px;
+      }
+      .section-one .part-two img {height: 250px;
+                                  width: 150px;
+      } 
+
+      /* styling of section two */
+      .section-two .part-one {font-size: 30px;
+                              line-height: 48px;
+      }
+      .section-two .part-two img {height: 400px;
+                                  width: 400px;
+      }
+
+      /* styling of section three */
+      .section-three .part {width: 30%;
+      }
+      .section-three .part .image-line {height: 250px;
+      }
+      .section-three .view-line button {transform: scale(1.3);
+      }
+      .section-three .part .content #secondP {margin-top: 20px;
+                                              line-height: 24px;
+      }
+      
+      /* styling of section four */
+      .section-four .skills {margin: 0 100px;
+      }
+      .section-four .skill .part-one h3 {font-size: 36px;
+      }
+      .section-four .skill .part-two .main {width: 450px;
+                                            height: 2vh;
+      }
+      .section-four h3 {font-size: 48px;
+      } 
+
+      /* styling of section five */
+      .section-five .blog {width: 40%;
+                           margin: 30px;
+      }.section-five .blog .image-part {height: 300px;
+      }
+      .section-five .blog .heading {font-size: 20px;
+      }
+      .section-five .blog .summary {font-size: 18px;
+                                    line-height: 22px;
+      }
+      .section-five .blog .date {font-size: 16px;
+      }
+}
