@@ -39,7 +39,7 @@ This website is built From mobile - desktop
                 border-radius: 50%;
                 padding: 0 0 3px 3px;
 }
-.menus {width: 20px; 
+.menus {width: 20px;
         height: 2px;
         background-color: #C94747;
         border-radius: 50px;
@@ -167,6 +167,7 @@ header ul a {text-decoration: none;
 .section-one .part-two img {height: 60px;
                             width: 40px;
                             z-index: 1;
+                            transition: .25s ease-in-out;
 }
 .section-one .part-two #img1:hover {transform: scale(2);
                                     transition: .25s ease-in-out;
@@ -199,15 +200,14 @@ header ul a {text-decoration: none;
                     align-items: center;
                     justify-content: center;
 }
-.section-two .part-two img {height: 300px;
-                            width: 300px;
+.section-two .part-two img {height: 250px;
+                            width: 250px;
                             border-radius: 50%;
                             border: 5px solid #C94747;
 }
 .section-two .part-one {font-size: 18px;
                         letter-spacing: 1px;
-                        font-family: Roboto Condensed;
-                        font-style: italic;
+                        font-family: rancho;
                         text-align: center;
 }
 
@@ -245,7 +245,11 @@ header ul a {text-decoration: none;
 }
 .section-three .part-nine .image-line {background-image: url(../PortFolio/media/svg-img.png);
 }
-.section-three .part-ten .image-line {background: url(../PortFolio/media/vanguard-img.png) no-repeat center;
+.section-three .part-ten .image-line {background: url(../PortFolio/media/vanguard-img.png);
+}
+.section-three .part-eleven .image-line {background: url(../PortFolio/media/uwani-img.png);
+}
+.section-three .part-twelve .image-line {background: url(../PortFolio/media/portfolio-img.png) center;
 }
 
 .section-three .part .content {background: linear-gradient(45deg, rgba(152, 199, 54, 0.56), rgba(124, 220, 226, 1));
@@ -253,7 +257,8 @@ header ul a {text-decoration: none;
                                transform: translateY(100%);
                                transition: 1s ease;
 }
-.section-three .part .image-line:hover .content {transform: translateY(-5%);
+.section-three .part .image-line:hover .content,
+.section-three .part .image-line:focus .content {transform: translateY(-5%);
 }
 .section-three .part .content h3 {text-align: center;
                                   font-size: 24px;
@@ -282,34 +287,33 @@ header ul a {text-decoration: none;
                                   font-size: 10px;
                                   outline: none;
 }
-.section-three .view-line button:nth-child(1) {border: 1px solid #C94747;    
+.design-btn {border: 1px solid #C94747;    
 }
-.section-three .view-line button:nth-child(2) {border: 1px solid #53F350;    
+.preview-btn {border: 1px solid #53F350;    
 }
-.section-three .view-line button:nth-child(3) {border: 1px solid white;   
+.github-btn {border: 1px solid white;
 }
 /* preview buttons style */
-.section-three .view-line button:nth-child(1):hover {background-color: #C94747;
+.section-three .view-line .design-btn:hover {background-color: #C94747;
 }
-.section-three .view-line button:nth-child(2):hover {background-color: #53F350;
+.section-three .view-line .preview-btn:hover {background-color: #53F350;
 }
-.section-three .view-line button:nth-child(3):hover {background-color: white;
+.section-three .view-line .github-btn:hover {background-color: white;
 }
-.section-three .view-line button:nth-child(1):hover > a {color: white;
-} 
-.section-three .view-line button:nth-child(2):hover > a {color: white;
-} 
-.section-three .view-line button:nth-child(3):hover > a {color: black;
-} 
-.section-three .view-line button:nth-child(1) a {color: #C94747;
+.design-btn a {color: #C94747;
+               text-decoration: none;
+}
+.preview-btn a {color: #53F350;
+                text-decoration: none;
+}
+.github-btn a {color: white;
                                                  text-decoration: none;
 }
-.section-three .view-line button:nth-child(2) a {color: #53F350;
-                                                 text-decoration: none;
+.design-btn:hover > a,
+.preview-btn:hover > a {color: white;
 }
-.section-three .view-line button:nth-child(3) a {color: white;
-                                                 text-decoration: none;
-}
+.github-btn:hover a {color: black;
+} 
 
 /* styling for section three ends */
 
@@ -350,40 +354,40 @@ header ul a {text-decoration: none;
                                         transform: translateX(-100%); 
 }
 /* animation part of the percentage for mobile */
-.section-four .skill .part-two .per-one.animate-mob {transform: translateX(-10%);
+.section-four .skill .part-two .per-one.animate-mob {transform: translateX(-5%);
                                                      transition: 1s ease;
 }
-.section-four .skill .part-two .per-two.animate-mob {transform: translateX(-15%);
+.section-four .skill .part-two .per-two.animate-mob {transform: translateX(-10%);
                                                      transition: 1s ease;
 }
-.section-four .skill .part-two .per-three.animate-mob {transform: translateX(-20%);
+.section-four .skill .part-two .per-three.animate-mob {transform: translateX(-10%);
                                                        transition: 1s ease;
 }
-.section-four .skill .part-two .per-four.animate-mob{transform: translateX(-40%);
+.section-four .skill .part-two .per-four.animate-mob{transform: translateX(-30%);
                                                      transition: 1s ease;
 }
-.section-four .skill .part-two .per-five.animate-mob {transform: translateX(-50%);
+.section-four .skill .part-two .per-five.animate-mob {transform: translateX(-35%);
                                                       transition: 1s ease;
 }
-.section-four .skill .part-two .per-six.animate-mob {transform: translateX(-40%);
+.section-four .skill .part-two .per-six.animate-mob {transform: translateX(-25%);
                                                      transition: 1s ease;
 }
-.section-four .skill .part-two .per-seven.animate-mob {transform: translateX(-50%);
+.section-four .skill .part-two .per-seven.animate-mob {transform: translateX(-35%);
                                                        transition: 1s ease;
 }
-.section-four .skill .part-two .per-eight.animate-mob {transform: translateX(-80%);
+.section-four .skill .part-two .per-eight.animate-mob {transform: translateX(-70%);
                                                        transition: 1s ease;
 }
-.section-four .skill .part-two .per-nine.animate-mob {transform: translateX(-20%);
+.section-four .skill .part-two .per-nine.animate-mob {transform: translateX(-10%);
                                                       transition: 1s ease;
 }
-.section-four .skill .part-two .per-ten.animate-mob {transform: translateX(-40%);
+.section-four .skill .part-two .per-ten.animate-mob {transform: translateX(-55%);
                                                      transition: 1s ease;
 }
-.section-four .skill .part-two .per-eleven.animate-mob {transform: translateX(-50%);
+.section-four .skill .part-two .per-eleven.animate-mob {transform: translateX(-45%);
                                                         transition: 1s ease;
 }
-.section-four .skill .part-two .per-twelve.animate-mob {transform: translateX(-70%);
+.section-four .skill .part-two .per-twelve.animate-mob {transform: translateX(-60%);
                                                         transition: 1s ease;
 }
 /* styling for section four ends */
@@ -392,6 +396,7 @@ header ul a {text-decoration: none;
 /* styling for section five starts */
 
 .section-five .blog {margin-top: 40px;
+                     margin-bottom: 60px;
 }
 .section-five .blog .image-part {height: 300px;
                                  overflow: hidden;
@@ -408,26 +413,32 @@ header ul a {text-decoration: none;
 .section-five .blog .info-part > * {margin-bottom: 5px;
 }
 .section-five .blog .heading {color: #53F350;
-                              font-family: Atata;
+                              font-family: Alata;
                               font-size: 24px;
                               font-weight: bold;
                               opacity: .8;
 }
 .section-five .blog .summary {letter-spacing: 1px;
                               font-size: 12px;
-                              font-family: Roboto;
+                              font-family: Rosario;
                               opacity: .5;
                               line-height: 18px;
                               border-left: 2px solid rgb(180, 180, 180);
                               background-color: #181717;
                               box-shadow: #272626;
                               padding: 1px 10px;
+                              margin: 20px 0;
 }
 .section-five .blog .date {float: right;
                            font-family: Roboto;
-                           font-weight: 10;
+                           font-weight: 100;
+                           font-style: italic;
                            opacity: .5;
                            font-size: 12px;
+}
+.section-five .blog i {position: relative;
+                       left: -5px;
+                       color: #53F350;
 }
 
 /* styling for section five ends */
@@ -467,6 +478,15 @@ header ul a {text-decoration: none;
                                  border-bottom-left-radius: 0;
                                  color: rgb(180, 180, 180);
                                  background-color: #C94747;
+}
+
+footer {background-color: #C94747;
+        height: 8vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-family: Rosario;
 }
 
 /* styling for section six ends */
@@ -597,11 +617,14 @@ header ul a {text-decoration: none;
     }
 }
 
-/* header and main initial styling */
+/* header, main and footer initial styling */
 header {opacity: 0;
         animation: showPage 1s linear forwards 6s;
 }
 main {opacity: 0;
+      animation: showPage 1s linear forwards 6s;
+}
+footer {opacity: 0;
       animation: showPage 1s linear forwards 6s;
 }
 /* animate display of header and main */
@@ -796,40 +819,40 @@ This media query is for tablet phone screen sizes
       } 
 
       /* animation part of the percentage for tab and desktop*/
-      .section-four .skill .part-two .per-one.animate-tab-desk {transform: translateX(-10%);
+      .section-four .skill .part-two .per-one.animate-tab-desk {transform: translateX(-5%);
                                                                 transition: 1s ease;
       }
-      .section-four .skill .part-two .per-two.animate-tab-desk {transform: translateX(-15%);
+      .section-four .skill .part-two .per-two.animate-tab-desk {transform: translateX(-10%);
                                                                 transition: 1s ease;
       }
-      .section-four .skill .part-two .per-three.animate-tab-desk {transform: translateX(-20%);
+      .section-four .skill .part-two .per-three.animate-tab-desk {transform: translateX(-10%);
                                                                   transition: 1s ease;
       }
-      .section-four .skill .part-two .per-four.animate-tab-desk {transform: translateX(-40%);
+      .section-four .skill .part-two .per-four.animate-tab-desk {transform: translateX(-30%);
                                                                  transition: 1s ease;
       }
-      .section-four .skill .part-two .per-five.animate-tab-desk {transform: translateX(-50%);
+      .section-four .skill .part-two .per-five.animate-tab-desk {transform: translateX(-35%);
                                                                  transition: 1s ease;
       }
-      .section-four .skill .part-two .per-six.animate-tab-desk {transform: translateX(-40%);
+      .section-four .skill .part-two .per-six.animate-tab-desk {transform: translateX(-25%);
                                                                 transition: 1s ease;
       }
-      .section-four .skill .part-two .per-seven.animate-tab-desk {transform: translateX(-50%);
+      .section-four .skill .part-two .per-seven.animate-tab-desk {transform: translateX(-35%);
                                                                   transition: 1s ease;
       }
-      .section-four .skill .part-two .per-eight.animate-tab-desk {transform: translateX(-80%);
+      .section-four .skill .part-two .per-eight.animate-tab-desk {transform: translateX(-70%);
                                                                   transition: 1s ease;
       }
-      .section-four .skill .part-two .per-nine.animate-tab-desk {transform: translateX(-20%);
+      .section-four .skill .part-two .per-nine.animate-tab-desk {transform: translateX(-10%);
                                                                  transition: 1s ease;
       }
-      .section-four .skill .part-two .per-ten.animate-tab-desk {transform: translateX(-40%);
+      .section-four .skill .part-two .per-ten.animate-tab-desk {transform: translateX(-55%);
                                                                 transition: 1s ease;
       }
-      .section-four .skill .part-two .per-eleven.animate-tab-desk {transform: translateX(-50%);
+      .section-four .skill .part-two .per-eleven.animate-tab-desk {transform: translateX(-45%);
                                                                    transition: 1s ease;
       }
-      .section-four .skill .part-two .per-twelve.animate-tab-desk {transform: translateX(-70%);
+      .section-four .skill .part-two .per-twelve.animate-tab-desk {transform: translateX(-60%);
                                                                    transition: 1s ease;
       }
 
@@ -842,6 +865,8 @@ This media query is for tablet phone screen sizes
       .section-five .blog {width: 50%;
                            margin: 10px;
       }.section-five .blog .image-part {height: 270px;
+      }
+      .section-five .blog .summary {margin: 15px 0;
       }
       /* section five ends */
       
@@ -857,6 +882,8 @@ This media query is for tablet phone screen sizes
       }
       /* section six ends */
 
+      footer {font-size: 24px;
+      }
 
       /* End of tablet media queres */
 
@@ -889,9 +916,10 @@ This media query is for tablet phone screen sizes
       /* styling of section two */
       .section-two .part-one {font-size: 30px;
                               line-height: 48px;
+                              padding: 0 30px;
       }
-      .section-two .part-two img {height: 400px;
-                                  width: 400px;
+      .section-two .part-two img {height: 350px;
+                                  width: 350px;
       }
 
       /* styling of section three */
@@ -910,8 +938,7 @@ This media query is for tablet phone screen sizes
       }
       .section-four .skill .part-one h3 {font-size: 36px;
       }
-      .section-four .skill .part-two .main {width: 450px;
-                                            height: 2vh;
+      .section-four .skill .part-two .main {width: 350px;
       }
       .section-four h3 {font-size: 48px;
       } 
